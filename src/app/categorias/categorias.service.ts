@@ -44,7 +44,4 @@ export class CategoriasService {
     return this.http.get<Categoria>(this.categoriasURL+'/'+codigo).toPromise();
   }
 
-
-
-
 }

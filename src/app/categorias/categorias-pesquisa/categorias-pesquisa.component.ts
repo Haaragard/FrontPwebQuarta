@@ -43,7 +43,7 @@ export class CategoriasPesquisaComponent implements OnInit {
     this.service.excluir(categoria.id)
     .then(()=>{
       this.pesquisar();
-      this.msg.add({severity:'success', summary:'Exclusão', detail:'Categoria '+categoria.nome+' excluída'});
+      this.msg.add({severity:'Excluido com Sucesso', summary:'Exclusão', detail:'Categoria '+categoria.nome+' excluída'});
     });
   }
 
