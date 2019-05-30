@@ -1,0 +1,4 @@
+ng g m cidades --spec=false
+ng g s cidades/cidades --spec=false
+ng g c cidades/cidades-cadastro --spec=false
+

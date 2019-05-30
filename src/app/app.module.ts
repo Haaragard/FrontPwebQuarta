@@ -1,3 +1,8 @@
+import { ProdutosModule } from './produtos/produtos.module';
+import { ProdutosCadastroComponent } from './produtos/produtos-cadastro/produtos-cadastro.component';
+import { CidadesModule } from './cidades/cidades.module';
+import { CidadesCadastroComponent } from './cidades/cidades-cadastro/cidades-cadastro.component';
+import { CidadesPesquisaComponent } from './cidades/cidades-pesquisa/cidades-pesquisa.component';
 import { CategoriasModule } from './categorias/categorias.module';
 import { EstadosModule } from './estados/estados.module';
 import { CategoriasCadastroComponent } from './categorias/categorias-cadastro/categorias-cadastro.component';
@@ -12,16 +17,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ConfirmationService } from 'primeng/api';
+import {SidebarModule} from 'primeng/sidebar';
 
 import {Routes, RouterModule} from '@angular/router';
 
 const rotas: Routes = [
+  {path: '', redirectTo:'categorias', pathMatch:'full'},
   {path: 'categorias', component: CategoriasPesquisaComponent},
   {path: 'categorias/novo', component: CategoriasCadastroComponent},
   {path: 'categorias/:id', component: CategoriasCadastroComponent},
   {path: 'estados', component: EstadosPesquisaComponent},
   {path: 'estados/novo', component: EstadosCadastroComponent},
   {path: 'estados/:id', component: EstadosCadastroComponent},
+  {path: 'cidades', component: CidadesPesquisaComponent},
+  {path: 'cidades/novo', component: CidadesCadastroComponent},
+  {path: 'cidades/:id', component: CidadesCadastroComponent},
+  {path: 'produtos/novo', component: ProdutosCadastroComponent},
   
 ];
 
@@ -34,6 +45,9 @@ const rotas: Routes = [
     BrowserAnimationsModule,
     EstadosModule,
     CategoriasModule,
+    CidadesModule,
+    ProdutosModule,
+    SidebarModule,
     HttpClientModule,
     RouterModule.forRoot(rotas)
   ],

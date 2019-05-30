@@ -18,7 +18,7 @@ export class CategoriasCadastroComponent implements OnInit {
   constructor(
     private service: CategoriasService,
     private messageService: MessageService,
-    private rota: ActivatedRoute
+    private rota: ActivatedRoute,
   ) { }
 
   inserir(form: FormControl) {

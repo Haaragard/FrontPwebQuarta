@@ -1,4 +1,4 @@
-export class Categoria{
+export class Estado{
     id: number;
     nome: string;
 }
